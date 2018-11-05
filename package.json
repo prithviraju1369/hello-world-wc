@@ -1,6 +1,6 @@
 {
   "name": "hello-world-wc",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "My First Custom Component",
   "main": "index.js",
   "scripts": {
