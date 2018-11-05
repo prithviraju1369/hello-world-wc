@@ -1,8 +1,8 @@
 {
-  "name": "hello-world",
-  "version": "0.0.0",
+  "name": "hello-world-wc",
+  "version": "0.0.1",
   "description": "My First Custom Component",
-  "main": "hello-world.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
