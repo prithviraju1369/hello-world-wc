@@ -1,7 +1,7 @@
 {
 const template = document.createElement('template');
 
-template.innerHTML = `<button>hello</button>
+template.innerHTML = `<button>hi</button>
 <style>
 :host {
   display: inline-block;
@@ -14,12 +14,23 @@ const currentDocument = document.currentScript.ownerDocument;
 class HelloWorld extends HTMLElement {
     constructor() {
       super();
+
       this.addEventListener('click', this._handleBtnClick);
+
       const shadowRoot = this.attachShadow({mode: 'open'});
       shadowRoot.appendChild(template.content.cloneNode(true));
     }
+
+    connectedCallback() {
+      this.updateColor(this.color);
+    }
+    disconnectedCallback() {}
+    attributeChangedCallback () {
+
+    }
+    
     _handleBtnClick () {
-      alert(1);
+      this.dispatchEvent(new CustomEvent('onHelloWorldClick'));
     }
   }
   
